@@ -1,0 +1,21 @@
+
+import { Link } from 'react-router-dom';
+
+function Navbar() {
+    return (
+        <>
+            <div>
+                <Link to={""} className='link'>Find a Doctor</Link>
+                <Link to={""} className='link'>Specialties</Link>
+                <Link to={""} className='link'>How it Works</Link>
+                <Link to={""} className='link'>For Doctors</Link>
+            </div>
+            <div>
+                <Link to={"/login"} className='link auth-btn'>Log in</Link>
+                <Link to={"/register"} className='link reg-btn'>Create account</Link>
+            </div>
+        </>
+    )
+}
+
+export default Navbar
