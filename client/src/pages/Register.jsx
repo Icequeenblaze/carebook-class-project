@@ -25,7 +25,7 @@ function Register() {
         </fieldset>
         <div className="two-col">
           <label className="field">
-          First names
+          First name
           <input type="text" name='firstname' required value={""} />
           </label>
           <label className="field">
