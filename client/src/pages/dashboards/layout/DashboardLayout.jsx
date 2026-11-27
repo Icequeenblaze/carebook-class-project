@@ -17,6 +17,7 @@ import logoOnDark from "../../../assets/logo/logo-on-dark.svg"
 import { MdLogout } from "react-icons/md";
 import { Link, Outlet, NavLink } from 'react-router-dom';
 import logo from "../../../assets/logo/logo.svg"
+import { useAuth } from '../../../context/AuthContext';
 
 const ASIDEMENUS = {
     patient: {
@@ -63,6 +64,7 @@ const ROLE_LABEL = {
 }
 
 function DashboardLayout({role}) {
+    const {user, logout} = useAuth();
     const [open, setOpen] = useState(false);
     const menu = ASIDEMENUS[role];
   return (
@@ -94,7 +96,7 @@ function DashboardLayout({role}) {
                 }
 
             </nav>
-            <button className="dash-logout">
+            <button className="dash-logout" onClick={logout}>
                 <MdLogout />
                 <span className='sr-only'>Log out</span>
             </button>
